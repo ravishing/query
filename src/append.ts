@@ -1,12 +1,12 @@
 import {
   flip,
-  append as rappend,
+  append as append,
 } from 'ramda';
 
 interface Append<T> {
   (acc: T[], val: T) : ReadonlyArray<T>
 }
 
-const append: Append = flip(rappend);
+const tqlAppend: Append<{}> = flip<{}, ReadonlyArray<{}> ,ReadonlyArray<{}>>(append);
 
-export default append;
+export default tqlAppend;
